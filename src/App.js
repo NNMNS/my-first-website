@@ -1,11 +1,12 @@
 import logo from './logo.svg';
-import { ChakraProvider } from '@chakra-ui/react'
+
 import './App.css';
 //import { Button } from '@chakra-ui/react'
 import { Button, ButtonGroup,Spinner, Input } from '@chakra-ui/react'
+import DisplayJohn, {JohnProfile} from "./components/DisplayJohn.js";
 function App() {
   return (
-    <ChakraProvider>
+    <div>
         <Button colorScheme="green" size='xs'>Button</Button>
         <Button colorScheme='red' size='sm'>Red</Button>
         <Button colorScheme='yellow' size='md'>Yellow</Button>
@@ -17,9 +18,13 @@ function App() {
         <Input variant='outline' placeholder='extra small size' size='xs' />
         <Input variant='filled' placeholder='small size' size='sm' />
         <Input variant='flushed' placeholder='medium size' size='md' />
-      </ChakraProvider>
+      
+      <DisplayJohn/>
+      <JohnProfile/>
+      </div>
       
   );
 }
+
 
 export default App;
